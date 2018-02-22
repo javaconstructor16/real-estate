@@ -81,6 +81,16 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                <div class="row">
+    <form method="post" action="{{url('/newsletter')}}">
+        <div class="form-group">
+            <input type="hidden" value="{{csrf_token()}}" name="_token" />
+            <label for="title">Email:</label>
+            <input type="email" class="form-control" name="email"/>
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
